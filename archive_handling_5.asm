@@ -1,5 +1,11 @@
-;Program that make simple archive handling operations
-;using the INT 21H
+;Program that make simple archive handling operations using the INT 21H
+;Operations:
+;    -Create directory
+;    -Change the actual directory
+;    -Delete directory
+;    -Create text file
+;    -Write in text file
+;    -Delete text file
 
 ;Conditions:
 ;- only fixed routes in vars to prevent changes in other directories 
