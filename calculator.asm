@@ -1,4 +1,15 @@
-;Variables 10,13,17 = (10,13 Posicion X,Y) (17 Simbolo)
+;Program that simulate basic functions of a calculator
+;Operations:
+;    -Sum
+;    -Substract
+;    -Multiplication
+;    -Division
+;    -Power
+
+;Conditions:
+; -only positive integer numbers
+; -input numbers up to 2 digits max
+; -results are limited to the maximum number possible in 16 bits = 65535
 
 TITLE PROYECTO
 .MODEL SMALL
@@ -24,9 +35,9 @@ TITLE PROYECTO
          DB 10,13,16,' 2.Substract'     ,
          DB 10,13,16,' 3.Multiplication',
          DB 10,13,16,' 4.Division'      ,
-         DB 10,13,16,' 5.Potencia'      , 
+         DB 10,13,16,' 5.Power'         , 
          DB 10,13,16,' 0.Exit program'  ,
-         DB 10,13,16,' Seleccion: '     ,'$'
+         DB 10,13,16,' Selection: '     ,'$'
          
     opt  DB ?  ;menu option selected
     
@@ -37,7 +48,7 @@ TITLE PROYECTO
     msg3  DB 10,13,16,' Multiplication: $'                        
     msg4  DB 10,13,16,' Division: $'                              
     msg5  DB 10,13,16,' Potencia: $'
-    msgdiv DB 10,13,17,' No se puede dividir entre 0 $'                              
+    msgdiv DB 10,13,17,' Can't divide by 0 $'                              
 
 .CODE                
 MAIN PROC NEAR       
